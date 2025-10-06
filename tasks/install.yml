@@ -65,7 +65,6 @@
       get_url:
         url: "{{ sql_exporter_download_url }}"
         dest: "{{ sql_exporter_root_dir }}/tmp/{{ sql_exporter_archive_name }}"
-        remote_src: true
       register: _download_archive
       until: _download_archive is succeeded
       retries: 5
