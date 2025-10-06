@@ -1,8 +1,8 @@
 ---
 
-- include: preflight.yml
+- include_tasks: preflight.yml
 
-- include: install.yml
+- include_tasks: install.yml
 
 - name: ensure sql_exporter service is started and enabled
   systemd:
