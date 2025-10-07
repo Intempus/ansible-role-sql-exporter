@@ -4,7 +4,7 @@ sql_exporter_version: 0.18.2
 
 sql_exporter_download_url: "https://github.com/burningalchemist/sql_exporter/releases/download/{{ sql_exporter_version }}/sql_exporter-{{ sql_exporter_version }}.linux-amd64.tar.gz"
 sql_exporter_archive_name: "v{{ sql_exporter_version }}.tar.gz"
-sql_exporter_extracted_dir: "v{{ sql_exporter_version }}"
+sql_exporter_extracted_dir: "sql_exporter-{{ sql_exporter_version }}.linux-amd64"
 
 sql_exporter_force_install: false
 
