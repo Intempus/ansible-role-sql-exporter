@@ -1,20 +1,5 @@
 ---
 
-- name: create sql_exporter system group
-  group:
-    name: "{{ sql_exporter_group }}"
-    system: true
-    state: present
-
-- name: create sql_exporter system user
-  user:
-    name: "{{ sql_exporter_user }}"
-    system: true
-    shell: /usr/sbin/nologin
-    group: "{{ sql_exporter_group }}"
-    home: "{{ sql_exporter_root_dir }}"
-    createhome: false
-
 - name: create sql_exporter directories
   file:
     path: "{{ sql_exporter_root_dir }}"
