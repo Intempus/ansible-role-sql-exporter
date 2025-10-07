@@ -62,6 +62,14 @@
   notify:
     - restart sql exporter
 
+- name: Generate collection files
+  template:
+    src: sql_collector.yml.j2
+    dest: "{{ deploy_helper.new_release_path }}/collectors/{{ item.name }}.collector.yml"
+  loop: "{{ sql_exporter_collectors }}"
+  notify:
+    - restart sql exporter
+
 - block:
 
     - name: create temporary deploy dir
