@@ -26,3 +26,8 @@ sql_exporter_config:
     max_connection_lifetime: 10m
   collector_files:
   - "{{ sql_exporter_release_dir }}/collectors/*.collector.yml"
+
+sql_exporter_web_config:
+  tls_server_config:
+    min_version: "TLS12"
+    max_version: "TLS13"

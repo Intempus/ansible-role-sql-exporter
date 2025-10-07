@@ -47,6 +47,16 @@
   notify:
     - restart sql exporter
 
+- name: configure sql_exporter web
+  template:
+    src: sql_web_config.yml.j2
+    dest: "{{ deploy_helper.new_release_path }}/web_config.yml"
+    owner: "{{ sql_exporter_user }}"
+    group: "{{ sql_exporter_group }}"
+    mode: 0600
+  notify:
+    - restart sql exporter
+
 - name: Generate collection files
   template:
     src: sql_collector.yml.j2
