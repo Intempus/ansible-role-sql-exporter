@@ -4,6 +4,7 @@ sql_exporter_version: 0.8
 
 sql_exporter_download_url: "https://github.com/justwatchcom/sql_exporter/archive/refs/tags/{{ sql_exporter_archive_name }}"
 sql_exporter_archive_name: "v{{ sql_exporter_version }}.tar.gz"
+sql_exporter_extracted_dir: "v{{ sql_exporter_version }}"
 
 sql_exporter_force_install: false
 
