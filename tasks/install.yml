@@ -46,7 +46,7 @@
 
 - name: create collector directory
   file:
-    dest: "{{ sql_exporter_release_dir }}/collectors"
+    dest: "{{ deploy_helper.new_release_path }}/collectors"
     state: directory
     owner: "{{ sql_exporter_user }}"
     group: "{{ sql_exporter_group }}"
