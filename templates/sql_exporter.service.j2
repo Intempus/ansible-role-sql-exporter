@@ -10,7 +10,7 @@ Environment=LOGLEVEL={{ sql_exporter_log_level }}
 ExecReload=/bin/kill -HUP $MAINPID
 ExecStart={{ sql_exporter_release_dir }}/sql_exporter \
   --web.listen-address={{ sql_exporter_web_listen_address }} \
-  --config.file={{ sql_exporter_release_dir }}/sql_exporter.yml
+  --config.file={{ sql_exporter_release_dir }}/sql_exporter.yml \
   --web.config.file={{ sql_exporter_release_dir }}/web_config.yml
 
 KillMode=process
