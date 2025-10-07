@@ -44,6 +44,14 @@
     group: "{{ sql_exporter_group }}"
     mode: 0750
 
+- name: create collector directory
+  file:
+    dest: "{{ sql_exporter_release_dir }}/collectors"
+    state: directory
+    owner: "{{ sql_exporter_user }}"
+    group: "{{ sql_exporter_group }}"
+    mode: 0750
+
 - name: configure sql_exporter
   template:
     src: sql_exporter.yml.j2
