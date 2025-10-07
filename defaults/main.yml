@@ -24,3 +24,5 @@ sql_exporter_config:
     max_connections: 3
     max_idle_connections: 3
     max_connection_lifetime: 10m
+  collector_files:
+  - "{{ sql_exporter_release_dir }}/collectors/*.collector.yml"
