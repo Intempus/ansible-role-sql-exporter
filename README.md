@@ -1,5 +1,7 @@
 # Ansible role: Prometheus SQL Exporter
 
+Ansible role to install the SQL Exporter found here https://github.com/burningalchemist/sql_exporter/tree/master
+
 Requirements
 ------------
 
