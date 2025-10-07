@@ -106,6 +106,10 @@
   notify:
     - restart sql exporter
 
+- name: Just force systemd to reread configs (2.4 and above)
+  ansible.builtin.systemd_service:
+    daemon_reload: true
+
 - name: finalize the deploy, removing the unfinished file and switching the symlink
   deploy_helper:
     path: "{{ sql_exporter_root_dir }}"
